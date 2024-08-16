@@ -44,3 +44,18 @@ type YugiohCardPrice struct {
 	AmazonPrice       string `json:"amazon_price"`
 	CoolstuffincPrice string `json:"coolstuffinc_price"`
 }
+
+type YugiohTemplate struct {
+	Id            int    `json:"id"`
+	Name          string `json:"name"`
+	Type          string `json:"type"`
+	Desc          string `json:"desc"`
+	Atk           int    `json:"atk,omitempty"`
+	Def           int    `json:"def,omitempty"`
+	Level         int    `json:"level,omitempty"`
+	Race          string `json:"race"`
+	Attribute     string `json:"attribute,omitempty"`
+	Archetype     string `json:"archetype"`
+	ImageUrl      string `json:"image_url"`
+	YgoprodeckUrl string `json:"ygoprodeck_url"`
+}

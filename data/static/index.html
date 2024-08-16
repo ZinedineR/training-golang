@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Name}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .card-container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .card-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .card-details {
+            margin-top: 20px;
+        }
+        .card-details h2 {
+            margin-bottom: 10px;
+        }
+        .card-details p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <img src="{{.ImageUrl}}" alt="{{.Name}}" width="200" height="300">
+
+    <div class="card-details">
+        <h2>{{ .Name }}</h2>
+        <p><strong>ID:</strong> {{ .Id }}</p>
+        <p><strong>Type:</strong> {{ .Type }}</p>
+        <p><strong>Description:</strong> {{ .Desc }}</p>
+        <p><strong>ATK:</strong> {{ .Atk }}</p>
+        <p><strong>DEF:</strong> {{ .Def }}</p>
+        <p><strong>Race:</strong> {{ .Race }}</p>
+        <p><strong>Level/Rank:</strong> {{ .Level }}</p>
+        <p><strong>Attribute:</strong> {{ .Attribute }}</p>
+        <p><strong>Archetype:</strong> {{ .Archetype }}</p>
+        <p><a href="{{ .YgoprodeckUrl }}" target="_blank">More Info</a></p>
+    </div>
+</div>
+
+</body>
+</html>
